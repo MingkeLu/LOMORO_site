@@ -25,7 +25,7 @@
 
 
   <title>LOMORO</title>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,21 +52,22 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">LOMORO: Long-term Monitoring of Dynamic Targets with Minimum Robotic Fleet
+under Resource Constraints</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://mingkelu.github.io/" target="_blank">Mingke Lu</a>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://shuaikang-wang.github.io/" target="_blank">Shuaikang Wang</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://mengguo.github.io/personal_site/" target="_blank">Meng Guo</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Peking University<br>IEEE/RSJ Intl. Conf. on Intelligent Robots and Systems (IROS), 2025</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -84,7 +85,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      <a href="static/pdfs/Appendix.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -94,7 +95,7 @@
                   </span>
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -102,7 +103,7 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> -->
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
@@ -133,12 +134,20 @@
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Supplementary Video
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser video -->
+
+<!-- Static Banner Picture Section -->
+<section class="hero is-medium is-light" style="padding: 0;">
+  <img src="static/images/banner_image.png" alt="Banner Image" style="width: 70%; height: auto; display: block; margin: 0 auto;" />
+    <h2 class="subtitle has-text-centered">
+        System Framework
+      </h2>
+</section>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +157,30 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Long-term monitoring of numerous dynamic targets can be tedious for a human operator
+  and infeasible for a single robot,
+  e.g., to monitor wild flocks, detect intruders, search and rescue.
+  Fleets of autonomous robots can be effective by acting collaboratively and concurrently.
+  However, the online coordination is challenging due to the unknown behaviors
+  of the targets and the limited perception of each robot.
+  Existing work often deploys all robots available without minimizing the fleet size,
+  or neglects the constraints on their resources such as battery and memory.
+  This work proposes an online coordination scheme called LOMORO
+  for collaborative target monitoring, path routing and resource charging. 
+  It includes three core components:
+  (I) the modeling of multi-robot task assignment problem under
+  the constraints on resources and monitoring intervals;
+  (II) the resource-aware task coordination algorithm
+  iterates between the high-level assignment of dynamic targets  
+  and the low-level multi-objective routing via the Martin's algorithm;
+  (III) the online adaptation algorithm in case of unpredictable target behaviors
+  and robot failures.
+  It ensures the explicitly upper-bounded monitoring intervals for all targets
+  and the lower-bounded resource levels for all robots,
+  while minimizing the average number of active robots.
+  The proposed methods are validated extensively via large-scale simulations
+  against several baselines,
+  under different road networks, robot velocities, charging rates and monitoring intervals. 
           </p>
         </div>
       </div>
@@ -165,30 +197,54 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT" style="width: 70%; height: auto; display: block; margin: 0 auto;"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          <p><strong>Illustration of the considered scenario.
+          </strong> <strong>Top-Left</strong> and <strong>Top-Right</strong>: 3–4 UAVs 
+          are actively monitoring 10 targets (in red) within a road network, with their 
+          static (<em>t</em> = 12&nbsp;s) and online (<em>t</em> = 381&nbsp;s) plans. 
+          <strong>Middle-Left</strong>: Batteries of 6 robots during the online execution 
+          of 400&nbsp;s. <strong>Bottom-Left</strong>: Intervals from the last monitoring 
+          of 10 targets. <strong>Middle-Right</strong>: Average number of active robots, 
+          the time when replans take place, and their computation time. <strong>Bottom-Right</strong>: 
+          The robots responsible for each target during any consecutive replans. Each target has 2 rows, 
+          with the lower representing the target node and the upper the intersection target node respectively.</p>
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT" style="width: 70%; height: auto; display: block; margin: 0 auto;"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          <p><strong>Illustration of another considered scenario.</strong>
+          <strong>Top-Left</strong> and <strong>Top-Right</strong>: 
+            Trajectories of 8 robots actively monitoring 15 targets in the 
+            considered scenario at <em>t</em> = 84&nbsp;s and <em>t</em> = 347&nbsp;s respectively. 
+            <strong>Bottom</strong>: The action of 8 robots at each time during the simulation of 400&nbsp;s.</p>
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/scalability1.png" alt="MY ALT TEXT" style="width: 65%; height: auto; display: block; margin: 0 auto;"/>
+        <img src="static/images/scalability2.png" alt="MY ALT TEXT" style="width: 65%; height: auto; display: block; margin: 0 auto;"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         <p><strong>Illustration of scalability analysis results.</strong>
+           The number of active robots with an increasing number of targets, 
+           concerning γ<sub>n</sub>/β<sub>s</sub> <strong>(a)</strong>, T<sub>m</sub> <strong>(b)</strong>, 
+           and C<sub>n</sub> <strong>(c)</strong>. The computation time with an increasing number of targets, 
+           concerning C<sub>n</sub> <strong>(d)</strong>.</p>
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT" style="width: 70%; height: auto; display: block; margin: 0 auto;"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        <p><strong>Illustration of the generalization circumstances.
+        </strong> <strong>(a)</strong>: Previous plan result at <em>t</em> = 
+        20&nbsp;s when a robot accidentally crashes. <strong>(b)</strong>: 
+        New replan after the robot crashed. <strong>(c)</strong>: 
+        Trajectories of 6 robots monitoring 15 targets that can dynamically enter 
+        and exit the road network over a period of 400&nbsp;s.</p>
+
       </h2>
     </div>
   </div>
@@ -201,57 +257,57 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <!-- <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
-          <div class="publication-video">
+          <div class="publication-video"> -->
             <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
+          <video poster="" id="video1" autoplay controls muted loop height="100%"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
+            <!-- <source src="static/videos/carousel1.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
+          <video poster="" id="video2" autoplay controls muted loop height="100%"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <!-- <source src="static/videos/carousel2.mp4"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\ -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
+            <!-- <source src="static/videos/carousel3.mp4"
             type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
